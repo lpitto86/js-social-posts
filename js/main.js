@@ -75,7 +75,7 @@ function createPostCard(post) {
   
     const profilePic = document.createElement('img');
     profilePic.classList.add('profile-pic');
-    profilePic.src = post.author.photo;
+    profilePic.src = post.media;
     profilePic.alt = post.author.name;
   
     postMetaIcon.appendChild(profilePic);
@@ -89,7 +89,7 @@ function createPostCard(post) {
   
     const postMetaTime = document.createElement('div');
     postMetaTime.classList.add('post-meta__time');
-    postMetaTime.textContent = post.date;
+    postMetaTime.textContent = post.created;
   
     postMetaData.appendChild(postMetaAuthor);
     postMetaData.appendChild(postMetaTime);
@@ -104,7 +104,7 @@ function createPostCard(post) {
     // Aggiungi il testo del post
     const postText = document.createElement('div');
     postText.classList.add('post__text');
-    postText.textContent = post.text;
+    postText.textContent = post.content;
     postElement.appendChild(postText);
   
     // Aggiungi l'immagine del post se presente
